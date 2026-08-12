@@ -3,11 +3,9 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Loja 3D — Produtos Impressos em 3D</title>
-  <meta name="description" content="Produtos exclusivos impressos em 3D. Vasinhos decorativos, Ciclo de Quintas e Tampa para Takamine." />
-
-  <!-- Open Graph (WhatsApp / Instagram preview) -->
-  <meta property="og:title" content="Loja 3D" />
+  <title>3D Heroes Studio — Produtos Impressos em 3D</title>
+  <meta name="description" content="Produtos exclusivos impressos em 3D: vasinhos, organizadores, acessórios musicais e mais." />
+  <meta property="og:title" content="3D Heroes Studio" />
   <meta property="og:description" content="Produtos exclusivos impressos em 3D" />
   <meta property="og:type" content="website" />
 
@@ -34,7 +32,6 @@
       padding: 0 0 48px;
     }
 
-    /* ── Header ── */
     header {
       background: linear-gradient(135deg, #1e1e2e 0%, #2d2b55 100%);
       color: #fff;
@@ -42,11 +39,7 @@
       padding: 40px 20px 32px;
     }
 
-    .logo-icon {
-      font-size: 48px;
-      line-height: 1;
-      margin-bottom: 12px;
-    }
+    .logo-icon { font-size: 48px; line-height: 1; margin-bottom: 12px; }
 
     header h1 {
       font-size: clamp(1.6rem, 5vw, 2.4rem);
@@ -54,35 +47,35 @@
       letter-spacing: -0.5px;
     }
 
-    header p {
-      margin-top: 8px;
-      font-size: 1rem;
-      opacity: 0.75;
-    }
+    header p { margin-top: 8px; font-size: 1rem; opacity: 0.75; }
 
-    .badge {
-      display: inline-block;
+    .insta-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
       margin-top: 16px;
       background: rgba(255,255,255,0.12);
       border: 1px solid rgba(255,255,255,0.2);
       color: #fff;
-      font-size: 0.78rem;
-      padding: 4px 14px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      padding: 6px 16px;
       border-radius: 100px;
-      letter-spacing: 0.5px;
+      text-decoration: none;
+      transition: background 0.2s;
     }
 
-    /* ── Grid de produtos ── */
+    .insta-link:hover { background: rgba(255,255,255,0.2); }
+
     .grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
       gap: 24px;
-      max-width: 960px;
+      max-width: 1000px;
       margin: 40px auto;
       padding: 0 20px;
     }
 
-    /* ── Card ── */
     .card {
       background: var(--card);
       border-radius: var(--radius);
@@ -101,16 +94,10 @@
     .card-img {
       width: 100%;
       aspect-ratio: 1 / 1;
-      object-fit: cover;
-      background: #e8e8f0;
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 64px;
-    }
-
-    /* placeholder quando não há imagem */
-    .card-img.placeholder {
+      font-size: 72px;
       background: linear-gradient(135deg, #e8e8f0, #d0d0e0);
     }
 
@@ -131,32 +118,25 @@
     }
 
     .card-title {
-      font-size: 1.15rem;
+      font-size: 1.05rem;
       font-weight: 700;
       line-height: 1.3;
     }
 
     .card-desc {
-      font-size: 0.88rem;
+      font-size: 0.87rem;
       color: var(--muted);
       line-height: 1.5;
       flex: 1;
     }
 
     .card-price {
-      font-size: 1.4rem;
+      font-size: 1.5rem;
       font-weight: 800;
       color: var(--text);
       margin-top: 4px;
     }
 
-    .card-price span {
-      font-size: 0.9rem;
-      font-weight: 500;
-      color: var(--muted);
-    }
-
-    /* ── Botão ML ── */
     .btn-ml {
       display: flex;
       align-items: center;
@@ -169,23 +149,13 @@
       color: var(--ml-dark);
       font-weight: 800;
       font-size: 0.95rem;
-      border: none;
       border-radius: 10px;
       text-decoration: none;
-      cursor: pointer;
       transition: filter 0.15s, transform 0.1s;
     }
 
-    .btn-ml:hover {
-      filter: brightness(0.95);
-      transform: scale(0.99);
-    }
+    .btn-ml:hover { filter: brightness(0.95); transform: scale(0.99); }
 
-    .btn-ml svg {
-      flex-shrink: 0;
-    }
-
-    /* ── Footer ── */
     footer {
       text-align: center;
       font-size: 0.82rem;
@@ -194,104 +164,119 @@
       margin-top: 8px;
     }
 
-    footer a {
-      color: var(--accent);
-      text-decoration: none;
-    }
+    footer a { color: var(--accent); text-decoration: none; }
 
-    /* ── Responsivo mobile ── */
-    @media (max-width: 400px) {
-      .grid { gap: 16px; }
-    }
+    @media (max-width: 400px) { .grid { gap: 16px; } }
   </style>
 </head>
 <body>
 
   <header>
     <div class="logo-icon">🖨️</div>
-    <h1>Loja 3D</h1>
+    <h1>3D Heroes Studio</h1>
     <p>Produtos exclusivos impressos em 3D</p>
-    <div class="badge">✦ Handmade &amp; 3D Printed</div>
+    <a class="insta-link" href="https://instagram.com/3dheroesstudio" target="_blank" rel="noopener">
+      📸 @3dheroesstudio
+    </a>
   </header>
 
   <div class="grid">
 
-    <!-- ── Produto 1: Vasinho ── -->
+    <!-- Vasinhos -->
     <div class="card">
-      <div class="card-img placeholder" style="font-size:72px">🌱</div>
-      <!-- Para adicionar imagem real, substitua a div acima por:
-           <img src="imagem-vasinho.jpg" class="card-img" alt="Vasinho decorativo 3D"> -->
+      <div class="card-img">🌱</div>
       <div class="card-body">
         <div class="card-tag">Decoração</div>
-        <div class="card-title">Vasinho Decorativo 3D</div>
-        <div class="card-desc">
-          Vasinho impresso em 3D com design exclusivo. Perfeito para suculentas, cactos e plantas pequenas. Acabamento premium e cores variadas.
-        </div>
-        <div class="card-price">R$ 00,00 <span>/ unidade</span></div>
-        <a class="btn-ml"
-           href="COLE_AQUI_O_LINK_DO_ML_VASINHO"
-           target="_blank" rel="noopener noreferrer">
-          <!-- Ícone ML -->
-          <svg width="20" height="20" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <circle cx="16" cy="16" r="16" fill="#3D3D3D"/>
-            <text x="16" y="21" text-anchor="middle" fill="#FFE600" font-size="14" font-weight="bold" font-family="Arial">ML</text>
-          </svg>
+        <div class="card-title">3 Vasinhos para Mudas / Suculentas — Nude</div>
+        <div class="card-desc">Kit com 3 vasinhos impressos em 3D, ideais para suculentas, cactos e mudas pequenas. Acabamento nude elegante.</div>
+        <div class="card-price">R$ 65,75</div>
+        <a class="btn-ml" href="https://produto.mercadolivre.com.br/MLB-4337726935-3-vasinhos-para-mudas-suculenta-flor-artificial-sem-plantas-nude-_JM" target="_blank" rel="noopener">
+          <svg width="20" height="20" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"><circle cx="16" cy="16" r="16" fill="#3D3D3D"/><text x="16" y="21" text-anchor="middle" fill="#FFE600" font-size="13" font-weight="bold" font-family="Arial">ML</text></svg>
           Comprar no Mercado Livre
         </a>
       </div>
     </div>
 
-    <!-- ── Produto 2: Ciclo de Quintas ── -->
+    <!-- Suporte Escova -->
     <div class="card">
-      <div class="card-img placeholder" style="font-size:72px">🎵</div>
+      <div class="card-img">🪥</div>
+      <div class="card-body">
+        <div class="card-tag">Banheiro</div>
+        <div class="card-title">Suporte Porta Escova de Dente e Creme Dental — Nude</div>
+        <div class="card-desc">Organizador de pia impresso em 3D para escova de dente e creme dental. Design minimalista e funcional.</div>
+        <div class="card-price">R$ 34,90</div>
+        <a class="btn-ml" href="https://produto.mercadolivre.com.br/MLB-6590711326-suporte-porta-escova-de-dente-e-creme-dental-pia-banheiro-nude-_JM" target="_blank" rel="noopener">
+          <svg width="20" height="20" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"><circle cx="16" cy="16" r="16" fill="#3D3D3D"/><text x="16" y="21" text-anchor="middle" fill="#FFE600" font-size="13" font-weight="bold" font-family="Arial">ML</text></svg>
+          Comprar no Mercado Livre
+        </a>
+      </div>
+    </div>
+
+    <!-- Porta Batom -->
+    <div class="card">
+      <div class="card-img">👠</div>
+      <div class="card-body">
+        <div class="card-tag">Organização</div>
+        <div class="card-title">Porta Batom Organizador Sapato Scarpin — Rosa</div>
+        <div class="card-desc">Organizador em formato de scarpin impresso em 3D. Perfeito para guardar batons, pincéis e acessórios de maquiagem.</div>
+        <div class="card-price">R$ 89,60</div>
+        <a class="btn-ml" href="https://produto.mercadolivre.com.br/MLB-7315586094-porta-batom-organizador-sapato-scarpin-salto-alto-tecnolog3d-rosa-_JM" target="_blank" rel="noopener">
+          <svg width="20" height="20" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"><circle cx="16" cy="16" r="16" fill="#3D3D3D"/><text x="16" y="21" text-anchor="middle" fill="#FFE600" font-size="13" font-weight="bold" font-family="Arial">ML</text></svg>
+          Comprar no Mercado Livre
+        </a>
+      </div>
+    </div>
+
+    <!-- Círculo de Quintas -->
+    <div class="card">
+      <div class="card-img">🎵</div>
       <div class="card-body">
         <div class="card-tag">Música</div>
-        <div class="card-title">Ciclo de Quintas 3D</div>
-        <div class="card-desc">
-          Ciclo de quintas impresso em 3D — ferramenta didática e decorativa para músicos. Ideal para estudar harmonia ou decorar o estúdio.
-        </div>
-        <div class="card-price">R$ 00,00 <span>/ unidade</span></div>
-        <a class="btn-ml"
-           href="COLE_AQUI_O_LINK_DO_ML_CICLO"
-           target="_blank" rel="noopener noreferrer">
-          <svg width="20" height="20" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <circle cx="16" cy="16" r="16" fill="#3D3D3D"/>
-            <text x="16" y="21" text-anchor="middle" fill="#FFE600" font-size="14" font-weight="bold" font-family="Arial">ML</text>
-          </svg>
+        <div class="card-title">Círculo de Quintas — Acordes e Campo Harmônico</div>
+        <div class="card-desc">Ferramenta didática e decorativa impressa em 3D para músicos. Ideal para estudo de harmonia, escalas e acordes.</div>
+        <div class="card-price">R$ 38,50</div>
+        <a class="btn-ml" href="https://produto.mercadolivre.com.br/MLB-4241982783-circulo-de-quintas-acordes-campo-harmnico-_JM" target="_blank" rel="noopener">
+          <svg width="20" height="20" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"><circle cx="16" cy="16" r="16" fill="#3D3D3D"/><text x="16" y="21" text-anchor="middle" fill="#FFE600" font-size="13" font-weight="bold" font-family="Arial">ML</text></svg>
           Comprar no Mercado Livre
         </a>
       </div>
     </div>
 
-    <!-- ── Produto 3: Tampa Bateria Takamine ── -->
+    <!-- Tampa Takamine TP-4T -->
     <div class="card">
-      <div class="card-img placeholder" style="font-size:72px">🎸</div>
+      <div class="card-img">🎸</div>
       <div class="card-body">
         <div class="card-tag">Luthieria</div>
-        <div class="card-title">Tampa Bateria Takamine 3D</div>
-        <div class="card-desc">
-          Tampa do compartimento de bateria para violões Takamine, impressa em 3D com encaixe preciso. Acabamento que imita o original.
-        </div>
-        <div class="card-price">R$ 00,00 <span>/ unidade</span></div>
-        <a class="btn-ml"
-           href="COLE_AQUI_O_LINK_DO_ML_TAMPA"
-           target="_blank" rel="noopener noreferrer">
-          <svg width="20" height="20" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <circle cx="16" cy="16" r="16" fill="#3D3D3D"/>
-            <text x="16" y="21" text-anchor="middle" fill="#FFE600" font-size="14" font-weight="bold" font-family="Arial">ML</text>
-          </svg>
+        <div class="card-title">Tampa Bateria Takamine TP-4T / TK-40 / TP-E</div>
+        <div class="card-desc">Tampa do compartimento de bateria para violões Takamine modelos TP-4T, TK-40 e TP-E. Encaixe preciso, impressa em 3D.</div>
+        <div class="card-price">R$ 32,70</div>
+        <a class="btn-ml" href="https://produto.mercadolivre.com.br/MLB-4334853019-tampa-bateria-takamine-tp-4t-tk-40-tp-e-_JM" target="_blank" rel="noopener">
+          <svg width="20" height="20" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"><circle cx="16" cy="16" r="16" fill="#3D3D3D"/><text x="16" y="21" text-anchor="middle" fill="#FFE600" font-size="13" font-weight="bold" font-family="Arial">ML</text></svg>
           Comprar no Mercado Livre
         </a>
       </div>
     </div>
 
-  </div><!-- /grid -->
+    <!-- Tampa Takamine TK-40 v2 -->
+    <div class="card">
+      <div class="card-img">🎸</div>
+      <div class="card-body">
+        <div class="card-tag">Luthieria</div>
+        <div class="card-title">Tampa Bateria Takamine TK-40 / TP-4 / GD11 / GC6</div>
+        <div class="card-desc">Tampa do compartimento de bateria para violões Takamine modelos TK-40, TP-4, TP-4T, GD11 e GC6. Impressa em 3D com acabamento fiel ao original.</div>
+        <div class="card-price">R$ 37,90</div>
+        <a class="btn-ml" href="https://produto.mercadolivre.com.br/MLB-5664619572-tampa-bateria-takamine-tk-40-tp-4-tp-4t-gd11-gc6-tampinha-_JM" target="_blank" rel="noopener">
+          <svg width="20" height="20" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"><circle cx="16" cy="16" r="16" fill="#3D3D3D"/><text x="16" y="21" text-anchor="middle" fill="#FFE600" font-size="13" font-weight="bold" font-family="Arial">ML</text></svg>
+          Comprar no Mercado Livre
+        </a>
+      </div>
+    </div>
+
+  </div>
 
   <footer>
-    <p>Dúvidas? Fale comigo no Instagram:
-      <a href="https://instagram.com/SEU_@_AQUI" target="_blank" rel="noopener">@SEU_@_AQUI</a>
-    </p>
-    <p style="margin-top:8px">Todos os produtos são feitos por encomenda e impressos em 3D 🖨️</p>
+    <p>Dúvidas? Me chama no Instagram: <a href="https://instagram.com/3dheroesstudio" target="_blank" rel="noopener">@3dheroesstudio</a></p>
+    <p style="margin-top:8px">Todos os produtos são feitos sob encomenda e impressos em 3D 🖨️</p>
   </footer>
 
 </body>
